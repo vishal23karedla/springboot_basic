@@ -20,6 +20,12 @@ public class StudentController {
     }
 
     @GetMapping
+    public String foo()
+    {
+        return "Go to /details route to get the students' details :)";
+    }
+
+    @GetMapping(path="/details")
     public List<Student> hello()
     {
         return studentService.getStudents();
